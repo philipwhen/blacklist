@@ -1,0 +1,11 @@
+prefix=/home/liruichun/CipherSuite/cs110-2cert_nolimited_static/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: OpenSSL-libciphersuite_crypto
+Description: OpenSSL cryptography library
+Version: 1.1.0
+Libs: -L${libdir} -lciphersuite_crypto
+Libs.private: -ldl -L ../usr/lib -lciphersuite_smengine -lciphersuite_crypto 
+Cflags: -I${includedir}
